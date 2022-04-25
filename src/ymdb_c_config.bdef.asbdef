@@ -1,0 +1,11 @@
+projection;
+//strict;
+
+define behavior for YMDB_C_CONFIG alias Config
+{
+
+  use action signup;
+  use action delete_user;
+  use action signin;
+  use action signout;
+}

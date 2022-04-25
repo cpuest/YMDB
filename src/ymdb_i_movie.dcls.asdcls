@@ -1,0 +1,13 @@
+@EndUserText.label: 'Authorization for Movie'
+@MappingRole: true
+define role YMDB_I_MOVIE {
+    grant
+        select
+            on
+                YMDB_I_MOVIE
+                    where
+                        _WList._Person.age < 1000
+                        or
+                        true;
+                        
+}

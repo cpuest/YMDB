@@ -1,0 +1,11 @@
+@EndUserText.label: 'Authorization for Movie'
+@MappingRole: true
+define role YMDB_C_MOVIE {
+    grant
+        select
+            on
+                YMDB_C_MOVIE
+                    where
+                        inheriting conditions from entity YMDB_I_MOVIE;
+                        
+}

@@ -1,0 +1,20 @@
+managed implementation in class zbp_mdb_i_config unique;
+//strict;
+
+define behavior for YMDB_I_CONFIG alias Config
+persistent table YMDB_CONFIG
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  static action signup parameter YMDB_A_SIGNUPDIALOGBOX;
+  static action delete_user parameter YMDB_A_DELETEDIALOGBOX;
+  static action signin parameter YMDB_A_SIGNINDIALOGBOX;
+  static action signout;
+
+  mapping for ymdb_config {
+    Uname_ABAP = uname_abap;
+    UserName = user_name;
+    ApiKey = api_key;
+  }
+}
